@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一键打标系统</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>大模型一键打标系统</h1>
+
+        <div class="notice">
+            <p>📝 使用说明：
+                <br>
+                1️⃣ 选择你要使用的模型
+                <br>
+                2️⃣ 输入你的App Key
+                <br>
+                3️⃣ 上传你要标注的文件
+                <br>
+                4️⃣ 根据需求选择需要模型读取的列/参与标注的列
+                <br>
+                5️⃣ 根据需求撰写Prompt
+                <br>
+            </p>
+        </div>
+
+        <form action="/analyze" method="post" enctype="multipart/form-data">
+            <!-- 模型选择 -->
+            <div class="model-selection">
+                <h3>请选择所使用的模型</h3>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="model" value="claude" checked> Claude 3.5
+                    </label>
+                    <label>
+                        <input type="radio" name="model" value="gpt"> GPT 4o
+                    </label>
+                </div>
+            </div>
+
+            <!-- App Key 输入 -->
+            <div class="app-key-input">
+                <h3>请输入你的App Key</h3>
+                <input type="text" id="appKey" name="app_key" placeholder="输入你的App Key">
+            </div>
+
+            <h3>请上传你要分析的文件</h3>
+            <div class="upload-section" id="dropZone">
+                <div class="upload-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="17 8 12 3 7 8" />
+                        <line x1="12" y1="3" x2="12" y2="15" />
+                    </svg>
+                </div>
+                <h3>拖放CSV文件到此处</h3>
+                <p>或点击此处选择文件</p>
+                <input type="file" id="fileInput" name="file" accept=".csv" hidden>
+            </div>
+
+            <div class="file-info" id="fileInfo" style="display: none;">
+                <span class="file-name" id="fileName"></span>
+                <button type="button" class="remove-file" id="removeFile">×</button>
+            </div>
+
+            <div class="column-selection" id="columnSelection" style="display: none;">
+                <h3>请选择需要参与标注的列</h3>
+                <div id="columnCheckboxes"></div>
+            </div>
+            
+
+            <div class="prompt-section">
+                <h3 for="prompt">请输入你的Prompt:</h3>
+                <textarea id="prompt" name="prompt" placeholder="在此输入分析提示..."></textarea>
+                <span class="char-count">0</span>
+            </div>
+
+            <button type="submit" id="analyzeBtn" class="analyze-btn" disabled>开始分析</button>
+        </form>
+        <!-- 在 form 标签的结束标签前添加以下代码 -->
+        <div id="progressContainer" style="display: none;">
+            <div class="progress-bar">
+                <div id="progressBar" class="progress"></div>
+            </div>
+            <p id="progressText">处理中: 0/0</p>
+            <p id="elapsedTime">已等待时间: 0秒</p>
+            <p id="annotatedCount">已标注数据: 0/0</p>
+        </div>
+
+
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+
+</html>
