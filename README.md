@@ -14,7 +14,5 @@ Python app.py
 # What do you need to start it?
 1. Api key to start the LLM model
 
-# Tutorials
-
 
 
