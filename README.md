@@ -13,7 +13,7 @@ Python app.py
 1. API key to start the LLM model
 
 ## Tutorials
-1. After you started it successfully, it should occur the website after a few seconds like this:![image](Readme_figure/File_tree.png)
+1. After you started it successfully, it should occur the website after a few seconds like this:![image](src/Figure1.png)
 2. Then, choose the model that you would like to use; Remember in this step you should change the interface of the model in app.py, or you may not know how to start it
 3. Then, enter the api key of the model that you used
 4. Upload the files by clicking the blue button below and choosing the .csv file
