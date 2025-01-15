@@ -16,10 +16,10 @@ Python app.py
 1. After you started it successfully, it should occur the website after a few seconds like this:![image](src/Figure1.png)
 2. Then, choose the model that you would like to use; Remember in this step you should change the interface of the model in app.py, or you may not know how to start it
 3. Then, enter the api key of the model that you used
-4. Upload the files by clicking the blue button below and choosing the .csv file
-5. Then the application will automatically read the column's name of each row, which looks like this: 
+4. Upload the files by clicking the blue button below and choosing the .csv file ![image](src/Figure2.png)
+5. Then the application will automatically read the column's name of each row, which looks like this: ![image](src/Figure3.png)
 	Thus, you can choose the columns that you need to upload to let the LLM know
-6. It turns to write the prompt, which is essential, but I won't tell how to write prompt here, you can find it in other ways; 
-7. Then, click the button below to start it, and you will see the process instantly:
+6. It turns to write the prompt, which is essential, but I won't tell how to write prompt here, you can find it in other ways; ![image](src/Figure4.png)
+7. Then, click the button below to start it, and you will see the process instantly:![image](src/Figure5.png)
 8. After the annotation is done, you will see a toast like below, and click "close" it will automatically start to download in your computer:
 
