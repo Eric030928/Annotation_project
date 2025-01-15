@@ -1,8 +1,15 @@
 # Annotation_project
 
+<<<<<<< HEAD
 ## Background
 When it comes to analyzing a large amount of unstructured data to draw conclusions, reading the file content line by line is both time-consuming and laborious, and the operation is quite difficult. However, with this platform, you can easily start the process of having a large language model (LLM) assist you in completing the task. Specifically, the model can analyze a large amount of data in the file and label it according to your instructions.
 ## How to run it?
+=======
+# Background
+When we need to analyze substantial unstructral data to conclude, it's hard to read each line in files which is time-consuming and tiring; However, with the platform here, you can easily start the journey to let the LLM models help you complete your tasks -- to analyze the subtantial data from the file and help you annotate under your prompt
+
+# How to run it?
+>>>>>>> 1cedb7e6eaad365b0b70d1c75fabcfd6f1154f9b
 Download it;
 Make sure you have downloaded all the modules in app.py;
 Then open terminal and enter these:
@@ -10,6 +17,7 @@ Then open terminal and enter these:
 cd Annotation_project
 Python app.py
 ```
+<<<<<<< HEAD
 ## What do you need to start it?
 1. API key to start the LLM model
 
@@ -24,4 +32,10 @@ Python app.py
 6. It turns to write the prompt, which is essential, but I won't tell how to write prompt here, you can find it in other ways;  ![[IMG_0202.jpg]]
 7. Then, click the button below to start it, and you will see the process instantly:![[IMG_0204.png]]
 8. After the annotation is done, you will see a toast like below, and click "close" it will automatically start to download in your computer:![[IMG_0203.png]]
+=======
+# What do you need to start it?
+1. Api key to start the LLM model
+
+
+>>>>>>> 1cedb7e6eaad365b0b70d1c75fabcfd6f1154f9b
 
