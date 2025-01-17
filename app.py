@@ -34,7 +34,7 @@ def get_chat_by_gpt(messages, system_prompt='', model_choice=None, app_key=None)
         # Claude模型
         client = anthropic.Anthropic(
             auth_token=app_key,
-            base_url="https://aigc.sankuai.com/v1/claude/aws"
+            base_url=""
         )
         chat_completion = client.messages.create(
             model="anthropic.claude-3.5-sonnet",
@@ -45,7 +45,7 @@ def get_chat_by_gpt(messages, system_prompt='', model_choice=None, app_key=None)
         return chat_completion.content[0].text
     elif model_choice == '2':
         # GPT模型
-        DEFAULT_URL = "https://aigc.sankuai.com/v1/openai/native/chat/completions"
+        DEFAULT_URL = ""
         headers = {
             'Authorization': app_key,  
             'Content-type': 'application/json',
